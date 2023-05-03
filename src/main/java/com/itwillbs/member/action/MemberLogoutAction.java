@@ -8,27 +8,22 @@ import javax.servlet.http.HttpSession;
 
 import com.itwillbs.commons.Action;
 import com.itwillbs.commons.ActionForward;
+import com.itwillbs.commons.JSForward;
 
-public class MemberLogoutAction implements Action {
+public class MemberLogoutAction implements Action{
 
 	@Override
-	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println(" M : MemberLogoutAction_execute() ");
 		
 		// 세션정보 초기화
 		HttpSession session = request.getSession();
 		session.invalidate();
 		
-		System.out.println(" M : 세션정보 초기화 완료!");		
-
+		System.out.println(" M : 세션정보 초기화 완료! ");
+		// 페이지 이동
 		
-		response.setContentType("text/html; charset=UTF-8");
-		PrintWriter out = response.getWriter();
-		out.print("<script>");
-		out.print(" alert('로그아웃 성공!'); ");
-		out.print(" location.href='./Main.me'; ");
-		out.print("</script>");
-		out.close();
+		JSForward.alertAndMove(response, "로그아웃 되었습니다.", "./Main.me");
 		
 		System.out.println(" M  : JS사용 페이지 이동");
 		
@@ -38,6 +33,7 @@ public class MemberLogoutAction implements Action {
 //		forward.setPath("./Main.me");
 //		forward.setRedirect(true);
 //		return forward;
+		
 	}
-
+	
 }

@@ -4,6 +4,13 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
       background: #000000 !important;
@@ -26,7 +33,7 @@
   
   #login-con {
 	margin: auto; margin-top: 100px; margin-bottom: 100px; border: 1px solid #C0C0C0; width:500px;
-	border-radius: 5px;font-family: 'RIDIBatang'
+	border-radius: 5px; font-family: 'RIDIBatang';
    }
    
   #log-form {
@@ -43,5 +50,10 @@
   #log-form span{
   padding: 10px 10px;
   color: gray;
+  }
+  
+  .form-group h2{
+  font-family:'TheJamsil5Bold';
+  font-weight: 200;
   }
   

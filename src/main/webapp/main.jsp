@@ -1,240 +1,568 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>CODE LESS</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<meta name="author" content="" />
-		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/animate.css">
-		<link rel="stylesheet" href="css/owl.carousel.min.css">
-		<link rel="stylesheet" href="css/aos.css">
-		<link rel="stylesheet" href="css/bootstrap-datepicker.css">
-		<link rel="stylesheet" href="css/jquery.timepicker.css">
-		<link rel="stylesheet" href="css/fancybox.min.css">
-		<link rel="stylesheet" type="text/css" href="css/_custom.css">
-		<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
-		<link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
-	
-		<!-- Theme Style -->
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<head>
+<%@ include file="../head.jsp"%>
+</head>
 
-	</head>    
-	<body>
-<!-- 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"> -->
-<!-- 		<div class="container"> -->
-<!-- 			<a class="navbar-brand" href="./Main.me">CODE<span>LESS</span></a> -->
-<!-- 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"> -->
-<!-- 				<span class="oi oi-menu"></span> Menu -->
-<!-- 			</button> -->
+<%@ include file="../nav.jsp"%><!-- nav ì‚½ì… -->
 
-<!-- 			<div class="collapse navbar-collapse" id="ftco-nav"> -->
-<!-- 				<ul class="navbar-nav ml-auto"> -->
-<%-- 				<c:if test="${empty id }"> --%>
-<!-- 					<li class="nav-item"><a href="./MemberLogin.me" class="nav-link"><b>·Î±×ÀÎ</b></a></li> -->
-<!-- 					<li class="nav-item"><a href="about.html" class="nav-link"><b>È¸¿ø°¡ÀÔ</b></a></li> -->
-<%-- 				</c:if> --%>
-<%-- 				<c:if test="${!empty id }"> --%>
-<!-- 					<li class="nav-item"><a href="./MemberLogout.me" class="nav-link"><b>·Î±×¾Æ¿ô</b></a></li> -->
-<!-- 					<li class="nav-item"><a href="about.html" class="nav-link"><b>¸¶ÀÌÆäÀÌÁö</b></a></li> -->
-<%-- 				</c:if> --%>
-<!-- 				</ul> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-<!-- 		</nav> -->
+<!-- END head -->
 
-<jsp:include page="nav.jsp"></jsp:include>
-
-		<section class="site-hero overlay" style="background-image: url(images/background-g70cf72a56_1920.png)" data-stellar-background-ratio="0.5">
-			<div class="container">
-				<div class="row site-hero-inner justify-content-center align-items-center">
-					<div class="col-md-10 text-center" data-aos="fade-up">
-						<h2>CODE LESS</h2>
-						<h1 class="heading">ÄÚµå¸®½º</h1>
-					</div>
-				</div>
+<section class="site-hero overlay"
+	style="background-image: url(images/background-g70cf72a56_1920.png)"
+	data-stellar-background-ratio="0.5">
+	<div class="container">
+		<div
+			class="row site-hero-inner justify-content-center align-items-center">
+			<div class="col-md-10 text-center" data-aos="fade-up">
+				<h2>CODE LESS</h2>
+				<h1 class="heading">ì½”ë“œë¦¬ìŠ¤</h1>
 			</div>
+		</div>
+	</div>
 
-			<a class="mouse smoothscroll" href="#next">
-			<div class="mouse-icon">
-				<span class="mouse-wheel"></span>
-			</div>
-			</a>
-		</section>
+	<a class="mouse smoothscroll" href="#next">
+		<div class="mouse-icon">
+			<span class="mouse-wheel"></span>
+		</div>
+	</a>
+</section>
 <!-- END section -->
 
-		<section class="section bg-light pb-0"  >
-			<div class="container">
-				<div class="row check-availabilty" id="next">
-					<div class="block-32" data-aos="fade-up" data-aos-offset="-200">
-						<form action="#">
+<section class="section bg-light pb-0">
+	<div class="container">
+
+		<div class="row check-availabilty" id="next">
+			<div class="block-32" data-aos="fade-up" data-aos-offset="-200">
+
+				<form action="#">
+
+					<div class="row">
+						<div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+							<label for="checkin_date" class="font-weight-bold text-black">ì œì¡°ì‚¬</label>
+							<div class="field-icon-wrap">
+								<div class="icon">
+									<span class="ion-ios-arrow-down"></span>
+								</div>
+								<select name="" id="" class="form-control">
+									<option value="">ì• í”Œ</option>
+									<option value="">ì‚¼ì„±</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+							<label for="checkin_date" class="font-weight-bold text-black">ëª¨ë¸ëª…</label>
+							<div class="field-icon-wrap">
+								<div class="icon">
+									<span class="ion-ios-arrow-down"></span>
+								</div>
+								<select name="" id="" class="form-control" style="">
+									<option value="">ì—ì–´íŒŸ 1ì„¸ëŒ€</option>
+									<option value="">ì—ì–´íŒŸ 2ì„¸ëŒ€</option>
+									<option value="">ì—ì–´íŒŸ 3ì„¸ëŒ€</option>
+									<option value="">ì—ì–´íŒŸ í”„ë¡œ</option>
+									<option value="">ì—ì–´íŒŸ í”„ë¡œ 2ì„¸ëŒ€</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+							<label for="checkout_date" class="font-weight-bold text-black">ìƒ‰ìƒ</label>
+							<div class="field-icon-wrap">
+								<div class="icon">
+									<span class="ion-ios-arrow-down"></span>
+								</div>
+								<select name="" id="" class="form-control">
+									<option value="">í™”ì´íŠ¸</option>
+									<option value=""></option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+							<label for="checkout_date" class="font-weight-bold text-black">ì¢Œìš°ì„ íƒ</label>
+							<div class="field-icon-wrap">
+								<div class="icon">
+									<span class="ion-ios-arrow-down"></span>
+								</div>
+								<select name="" id="" class="form-control">
+									<option value="">ì¢Œ</option>
+									<option value="">ìš°</option>
+								</select>
+							</div>
+						</div>
+						<br>
+						<div class="col-md-12 mb-0 mb-md-0 col-lg-0"
+							style="margin-top: 40px;">
 							<div class="row">
-								<div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
-									<label for="checkin_date" class="font-weight-bold text-black">Á¦Á¶»ç</label>
-										<div class="field-icon-wrap">
-										<div class="icon"><span class="ion-ios-arrow-down"></span></div>
-											<select name="" id="" class="form-control">
-												<option value="">¾ÖÇÃ</option>
-												<option value="">»ï¼º</option>
-											</select>
+								<div class="col-md-6 mb-3 mb-md-0">
+									<label for="adults" class="font-weight-bold text-black">ê±°ë˜ë°©ë²•</label>
+									<div class="field-icon-wrap">
+										<div class="icon">
+											<span class="ion-ios-arrow-down"></span>
 										</div>
+										<select name="" id="adults" class="form-control">
+											<option value="">ì§ê±°ë˜</option>
+											<option value="">íƒë°°</option>
+
+										</select>
 									</div>
-									<div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
-										<label for="checkin_date" class="font-weight-bold text-black">¸ğµ¨¸í</label>
-										<div class="field-icon-wrap">
-											<div class="icon"><span class="ion-ios-arrow-down"></span></div>
-							                     <select name="" id="" class="form-control">
-							                       <option value="">¿¡¾îÆÌ 1¼¼´ë</option>
-							                       <option value="">¿¡¾îÆÌ 2¼¼´ë</option>
-							                       <option value="">¿¡¾îÆÌ 3¼¼´ë</option>
-							                       <option value="">¿¡¾îÆÌ ÇÁ·Î</option>
-							                       <option value="">¿¡¾îÆÌ ÇÁ·Î 2¼¼´ë</option>
-							                     </select>
-											</div>
+								</div>
+								<div class="col-md-6 mb-3 mb-md-0">
+									<label for="children" class="font-weight-bold text-black">ì§€ì—­ì„ íƒ</label>
+									<div class="field-icon-wrap">
+										<div class="icon">
+											<span class="ion-ios-arrow-down"></span>
 										</div>
-									<div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
-										<label for="checkout_date" class="font-weight-bold text-black">»ö»ó</label>
-										<div class="field-icon-wrap">
-											<div class="icon"><span class="ion-ios-arrow-down"></span></div>
-							                     <select name="" id="" class="form-control">
-							                       <option value="">È­ÀÌÆ®</option>
-							                       <option value=""></option>
-							                     </select>
-											</div>
-										</div>
-										<div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
-											<label for="checkout_date" class="font-weight-bold text-black">ÁÂ¿ì¼±ÅÃ</label>
-											<div class="field-icon-wrap">
-											<div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                     <select name="" id="" class="form-control">
-                       <option value="">ÁÂ</option>
-                       <option value="">¿ì</option>
-                     </select>
-               </div>
-             </div>
-               <br>
-               <div class="col-md-12 mb-0 mb-md-0 col-lg-0" style="margin-top: 40px;">
-  <div class="row">
-    <div class="col-md-6 mb-3 mb-md-0">
-      <label for="adults" class="font-weight-bold text-black">°Å·¡¹æ¹ı</label>
-      <div class="field-icon-wrap">
-        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-        <select name="" id="adults" class="form-control">
-        
-          <option value="">Á÷°Å·¡</option>
-          <option value="">ÅÃ¹è</option>
-          
-        </select>
-      </div>
-    </div>
-    <div class="col-md-6 mb-3 mb-md-0">
-      <label for="children" class="font-weight-bold text-black">Áö¿ª¼±ÅÃ</label>
-      <div class="field-icon-wrap">
-        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-        <select name="" id="" class="form-control">
-          <option value="">¿¡¾îÆÌ 1¼¼´ë</option>
-          <option value="">¿¡¾îÆÌ 2¼¼´ë</option>
-          <option value="">¿¡¾îÆÌ 3¼¼´ë</option>
-          <option value="">¿¡¾îÆÌ ÇÁ·Î</option>
-          <option value="">¿¡¾îÆÌ ÇÁ·Î 2¼¼´ë</option>
-        </select>
-      </div>
-    </div>
-  </div>
-</div>
+										<select name="" id="" class="form-control">
+											<option value="">ì—ì–´íŒŸ 1ì„¸ëŒ€</option>
+											<option value="">ì—ì–´íŒŸ 2ì„¸ëŒ€</option>
+											<option value="">ì—ì–´íŒŸ 3ì„¸ëŒ€</option>
+											<option value="">ì—ì–´íŒŸ í”„ë¡œ</option>
+											<option value="">ì—ì–´íŒŸ í”„ë¡œ 2ì„¸ëŒ€</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
 
-	<br>
-<input type="button" value="¹°Ç°°Ë»öÇÏ±â" class="btn btn-primary text-white" style="width: 500px; margin:auto; margin-top: 50px;" onclick="location.href='./ProductList.me';">
+						<br>
+						<button class="btn btn-primary text-white"
+							style="width: 500px; margin: auto; margin-top: 50px;">ê²€ìƒ‰í•˜ê¸°
+						</button>
 
-          </div>
-        </form>
-      </div>
+					</div>
+				</form>
+			</div>
 
 
-    </div>
-  </div>
+		</div>
+	</div>
 </section>
 
 <section class="py-5 bg-light">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-12 col-lg-7 ml-auto order-lg-2 position-relative mb-5" data-aos="fade-up">
-        <figure class="img-absolute">
-          <img src="images/chat.jpg" alt="Image" class="img-fluid" style="width: 300px;">
-</figure>
-<!-- <img src="images/chat.jpg" alt="Image" class="img-fluid rounded" > -->
-</div>
-<div class="col-md-12 col-lg-4 order-lg-1" data-aos="fade-up">
-  <h2 class="heading">ÄÚµå¸®½º¿¡ ´ëÇÏ¿© ..</h2>
-  <p style="font-size: 18px;">ÀÒ¾î¹ö¸° ³» ÀÌ¾îÆùÀÇ Â¦À» Ã£¾ÆÁÖ°í ½Í´Ù¸é ¾î¼­ ÀÌ¿ëÇØº¸¼¼¿ä!</p>
-        <p><a href="#" class="btn btn-primary text-white py-2 mr-3">´õ º¸±â</a></p>
-      </div>
-      
-    </div>
-  </div>
+	<div class="container">
+		<div class="row align-items-center">
+			<div
+				class="col-md-12 col-lg-7 ml-auto order-lg-2 position-relative mb-5"
+				data-aos="fade-up">
+				<figure class="img-absolute">
+					<img src="images/chat.jpg" alt="Image" class="img-fluid"
+						style="width: 300px;">
+				</figure>
+				<!-- <img src="images/chat.jpg" alt="Image" class="img-fluid rounded" > -->
+			</div>
+			<div class="col-md-12 col-lg-4 order-lg-1" data-aos="fade-up">
+				<h2 class="heading">Ã¬Â½Â”Ã«Â“ÂœÃ«Â¦Â¬Ã¬ÂŠÂ¤Ã¬Â—Â Ã«ÂŒÂ€Ã­Â•Â˜Ã¬Â—Â¬ ..</h2>
+				<p style="font-size: 18px;">Ã¬ÂÂƒÃ¬Â–Â´Ã«Â²Â„Ã«Â¦Â° Ã«Â‚Â´ Ã¬ÂÂ´Ã¬Â–Â´Ã­ÂÂ°Ã¬ÂÂ˜ Ã¬Â§ÂÃ¬ÂÂ„
+					Ã¬Â°Â¾Ã¬Â•Â„Ã¬Â£Â¼ÃªÂ³Â  Ã¬Â‹Â¶Ã«Â‹Â¤Ã«Â©Â´ Ã¬Â–Â´Ã¬Â„Âœ Ã¬ÂÂ´Ã¬ÂšÂ©Ã­Â•Â´Ã«Â³Â´Ã¬Â„Â¸Ã¬ÂšÂ”!</p>
+				<p>
+					<a href="#" class="btn btn-primary text-white py-2 mr-3">Ã«ÂÂ”
+						Ã«Â³Â´ÃªÂ¸Â°</a>
+				</p>
+			</div>
+
+		</div>
+	</div>
 </section>
 
-<jsp:include page="footer.jsp"></jsp:include>
-<!-- <footer class="section footer-section"> -->
-<!--   <div class="container"> -->
-<!--     <div class="row mb-4"> -->
-<!--       <div class="col-md-3 mb-5"> -->
-<!--         <ul class="list-unstyled link"> -->
-<!--           <li><a href="#">È¸»çÁ¤º¸</a></li> -->
-<!--           <li><a href="#">°³ÀÎÁ¤º¸Á¤Ã¥</a></li> -->
-   
-<!--         </ul> -->
-<!--       </div> -->
-<!--       <div class="col-md-3 mb-5" > -->
+<!--  <section class="section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-7">
+            <h2 class="heading" data-aos="fade-up">Rooms &amp; Suites</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <a href="#" class="room">
+              <figure class="img-wrap">
+                <img src="images/img_1.jpg" alt="Free website template" class="img-fluid mb-3">
+              </figure>
+              <div class="p-3 text-center room-info">
+                <h2>Single Room</h2>
+                <span class="text-uppercase letter-spacing-1">90$ / per night</span>
+              </div>
+            </a>
+          </div>
 
-<!--       </div> -->
-<!--       <div class="col-md-3 mb-5 pr-md-5 contact-info"> -->
-<!--         <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
-<!--             <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span>ºÎ»ê±¤¿ª½Ã ºÎ»êÁø±¸ ºÎÀüµ¿ 112-3 »ïÇÑ°ñµç°ÔÀÌÆ® 7Ãş</span></p> -->
-<!--             <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span> <span>051-803-0909</span></p> -->
-<!--             <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span> <span>itwill@domain.com</span></p> -->
-<!--           </div> -->
-<!--           <div class="col-md-3 mb-5"> -->
-          
-<!--               <ul class="list-unstyled link"> -->
-<!--               <li><a href="#">°øÁö»çÇ×</a></li> -->
-<!--               <li><a href="#">ÀÚÁÖÇÏ´ÂÁú¹®</a></li> -->
-<!--               <li><a href="#">1:1¹®ÀÇ</a></li> -->
-       		  
-<!--             </ul> -->
-           
- 
-<!--         </div> -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <a href="#" class="room">
+              <figure class="img-wrap">
+                <img src="images/img_2.jpg" alt="Free website template" class="img-fluid mb-3">
+              </figure>
+              <div class="p-3 text-center room-info">
+                <h2>Family Room</h2>
+                <span class="text-uppercase letter-spacing-1">120$ / per night</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <a href="#" class="room">
+              <figure class="img-wrap">
+                <img src="images/img_3.jpg" alt="Free website template" class="img-fluid mb-3">
+              </figure>
+              <div class="p-3 text-center room-info">
+                <h2>Presidential Room</h2>
+                <span class="text-uppercase letter-spacing-1">250$ / per night</span>
+              </div>
+            </a>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+    
+    
+    <section class="section slider-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-7">
+            <h2 class="heading" data-aos="fade-up">Photos</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="home-slider major-caousel owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
+              <div class="slider-item">
+                <a href="images/slider-1.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/slider-1.jpg" alt="Image placeholder" class="img-fluid"></a>
+              </div>
+              <div class="slider-item">
+                <a href="images/slider-2.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/slider-2.jpg" alt="Image placeholder" class="img-fluid"></a>
+              </div>
+              <div class="slider-item">
+                <a href="images/slider-3.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/slider-3.jpg" alt="Image placeholder" class="img-fluid"></a>
+              </div>
+              <div class="slider-item">
+                <a href="images/slider-4.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/slider-4.jpg" alt="Image placeholder" class="img-fluid"></a>
+              </div>
+              <div class="slider-item">
+                <a href="images/slider-5.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/slider-5.jpg" alt="Image placeholder" class="img-fluid"></a>
+              </div>
+              <div class="slider-item">
+                <a href="images/slider-6.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/slider-6.jpg" alt="Image placeholder" class="img-fluid"></a>
+              </div>
+              <div class="slider-item">
+                <a href="images/slider-7.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/slider-7.jpg" alt="Image placeholder" class="img-fluid"></a>
+              </div>
+            </div>
+            END slider
+          </div>
         
-<!--       </div> -->
-<!--     </footer> -->
+        </div>
+      </div>
+    </section>
+    END section
     
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    
-    
-    <script src="js/aos.js"></script>
-    
-    <script src="js/bootstrap-datepicker.js"></script> 
-    <script src="js/jquery.timepicker.min.js"></script> 
+    <section class="section bg-image overlay" style="background-image: url('images/hero_3.jpg');">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-7">
+            <h2 class="heading text-white" data-aos="fade">Our Restaurant Menu</h2>
+            <p class="text-white" data-aos="fade" data-aos-delay="100">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          </div>
+        </div>
+        <div class="food-menu-tabs" data-aos="fade">
+          <ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active letter-spacing-2" id="mains-tab" data-toggle="tab" href="#mains" role="tab" aria-controls="mains" aria-selected="true">Mains</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link letter-spacing-2" id="desserts-tab" data-toggle="tab" href="#desserts" role="tab" aria-controls="desserts" aria-selected="false">Desserts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link letter-spacing-2" id="drinks-tab" data-toggle="tab" href="#drinks" role="tab" aria-controls="drinks" aria-selected="false">Drinks</a>
+            </li>
+          </ul>
+          <div class="tab-content py-5" id="myTabContent">
+            
+            
+            <div class="tab-pane fade show active text-left" id="mains" role="tabpanel" aria-labelledby="mains-tab">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$20.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Murgh Tikka Masala</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$35.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Fish Moilee</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$15.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Safed Gosht</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$10.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">French Toast Combo</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$8.35</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Vegie Omelet</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$22.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Chorizo &amp; Egg Omelet</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                </div>
+              </div>
+              
 
+            </div> .tab-pane
+
+            <div class="tab-pane fade text-left" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$11.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Banana Split</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$72.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Sticky Toffee Pudding</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$26.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Pecan</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$42.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Apple Strudel</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$7.35</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Pancakes</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$22.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Ice Cream Sundae</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                </div>
+              </div>
+            </div> .tab-pane
+            <div class="tab-pane fade text-left" id="drinks" role="tabpanel" aria-labelledby="drinks-tab">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$32.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Spring Water</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$14.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Coke, Diet Coke, Coke Zero</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$93.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Orange Fanta</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$18.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Lemonade, Lemon Squash</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$38.35</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Sparkling Mineral Water</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                  <div class="food-menu mb-5">
+                    <span class="d-block text-primary h4 mb-3">$69.00</span>
+                    <h3 class="text-white"><a href="#" class="text-white">Lemon, Lime &amp; Bitters</a></h3>
+                    <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  </div>
+                </div>
+              </div>
+            </div> .tab-pane
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    END section
+    <section class="section testimonial-section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-7">
+            <h2 class="heading" data-aos="fade-up">People Says</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="js-carousel-2 owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
+            
+            <div class="testimonial text-center slider-item">
+              <div class="author-image mb-3">
+                <img src="images/person_1.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              </div>
+              <blockquote>
+
+                <p>&ldquo;A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
+              </blockquote>
+              <p><em>&mdash; Jean Smith</em></p>
+            </div> 
+
+            <div class="testimonial text-center slider-item">
+              <div class="author-image mb-3">
+                <img src="images/person_2.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              </div>
+              <blockquote>
+                <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>
+              </blockquote>
+              <p><em>&mdash; John Doe</em></p>
+            </div>
+
+            <div class="testimonial text-center slider-item">
+              <div class="author-image mb-3">
+                <img src="images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              </div>
+              <blockquote>
+
+                <p>&ldquo;When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.&rdquo;</p>
+              </blockquote>
+              <p><em>&mdash; John Doe</em></p>
+            </div>
+
+
+            <div class="testimonial text-center slider-item">
+              <div class="author-image mb-3">
+                <img src="images/person_1.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              </div>
+              <blockquote>
+
+                <p>&ldquo;A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
+              </blockquote>
+              <p><em>&mdash; Jean Smith</em></p>
+            </div> 
+
+            <div class="testimonial text-center slider-item">
+              <div class="author-image mb-3">
+                <img src="images/person_2.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              </div>
+              <blockquote>
+                <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>
+              </blockquote>
+              <p><em>&mdash; John Doe</em></p>
+            </div>
+
+            <div class="testimonial text-center slider-item">
+              <div class="author-image mb-3">
+                <img src="images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              </div>
+              <blockquote>
+
+                <p>&ldquo;When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.&rdquo;</p>
+              </blockquote>
+              <p><em>&mdash; John Doe</em></p>
+            </div>
+
+          </div>
+            END slider
+        </div>
+
+      </div>
+    </section>
     
 
-    <script src="js/main.js"></script>
-  </body>
+    <section class="section blog-post-entry bg-light">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-7">
+            <h2 class="heading" data-aos="fade-up">Events</h2>
+            <p data-aos="fade-up">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="media media-custom d-block mb-4 h-100">
+              <a href="#" class="mb-4 d-block"><img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid"></a>
+              <div class="media-body">
+                <span class="meta-post">February 26, 2018</span>
+                <h2 class="mt-0 mb-3"><a href="#">Travel Hacks to Make Your Flight More Comfortable</a></h2>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
+            <div class="media media-custom d-block mb-4 h-100">
+              <a href="#" class="mb-4 d-block"><img src="images/img_2.jpg" alt="Image placeholder" class="img-fluid"></a>
+              <div class="media-body">
+                <span class="meta-post">February 26, 2018</span>
+                <h2 class="mt-0 mb-3"><a href="#">5 Job Types That Aallow You To Earn As You Travel The World</a></h2>
+                <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="300">
+            <div class="media media-custom d-block mb-4 h-100">
+              <a href="#" class="mb-4 d-block"><img src="images/img_3.jpg" alt="Image placeholder" class="img-fluid"></a>
+              <div class="media-body">
+                <span class="meta-post">February 26, 2018</span>
+                <h2 class="mt-0 mb-3"><a href="#">30 Great Ideas On Gifts For Travelers</a></h2>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. t is a paradisematic country, in which roasted parts of sentences.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-image overlay" style="background-image: url('images/hero_4.jpg');">
+        <div class="container" >
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
+              <h2 class="text-white font-weight-bold">A Best Place To Stay. Reserve Now!</h2>
+            </div>
+            <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
+              <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+	<%@include file="../footer.jsp"%>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+
+
+<script src="js/aos.js"></script>
+
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+
+
+
+<script src="js/main.js"></script>
+</body>
 </html>

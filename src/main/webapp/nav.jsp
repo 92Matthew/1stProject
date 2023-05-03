@@ -19,11 +19,9 @@
 				</c:if>
 				<c:if test="${!empty id }">
 					<li class="nav-item"><a href="./MemberLogout.me" class="nav-link"><b>로그아웃</b></a></li>
-					<li class="nav-item"><a href="./MemberMypage.me" class="nav-link"><b>마이페이지</b></a></li>
+					<li class="nav-item"><a href="./member/mypage.jsp" class="nav-link"><b>마이페이지</b></a></li><!-- 수정요 -->
 				</c:if>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
-
-</html>
